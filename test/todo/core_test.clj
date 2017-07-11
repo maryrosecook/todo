@@ -24,5 +24,10 @@
            (with-in-str "new"
              (get-command))))))
 
+(deftest test-match-command-to-fn
+  (testing "Takes 'say-hi' and returns say-hi fn"
+    (is (= say-hi
+           (match-command-to-fn "say-hi")))))
+
 (deftest test-can-run-main
   (-main))

@@ -13,5 +13,15 @@
   (flush)
   (read-line))
 
+(defn match-command-to-fn
+  [command]
+  (let [command->fn {:say-hi say-hi}]
+    (println (type (command->fn (keyword command))))
+    (command->fn (keyword command))))
+
+(defn say-hi
+  []
+  (println "hi"))
+
 (defn -main
   [& args])
