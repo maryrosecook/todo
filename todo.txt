@@ -1,0 +1,7 @@
+
+remove old tests and methods
+write method that asks for todo and returns it
+test that a method prints a certain string to the console
+write a test for a method that takes user input
+write a method that takes user input
+write test for a method that returns hi
