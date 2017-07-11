@@ -1,4 +1,6 @@
 
+
+run main by running app
 remove old tests and methods
 write method that asks for todo and returns it
 test that a method prints a certain string to the console
