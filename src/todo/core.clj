@@ -3,6 +3,7 @@
 
 (defn get-todo []
   (print "New todo: ")
+  (flush)
   (read-line))
 
 ;; (defn -main
