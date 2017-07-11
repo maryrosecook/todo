@@ -1,4 +1,5 @@
 
+write get-and-run-command that takes command, maps to fn and runs fn
 write match-command-to-fn that takes "say-hi" command and returns say-hi fn
 write get-command that asks for and returns a command
 write main and get test to run it

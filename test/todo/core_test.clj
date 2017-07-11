@@ -29,5 +29,10 @@
     (is (= say-hi
            (match-command-to-fn "say-hi")))))
 
+(deftest test-get-and-run-command
+  (testing "Gets say-hi and runs corresponding fn"
+    (with-in-str "say-hi"
+      (get-and-run-command))))
+
 (deftest test-can-run-main
   (-main))

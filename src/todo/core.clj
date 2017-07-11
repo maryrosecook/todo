@@ -19,6 +19,10 @@
     (println (type (command->fn (keyword command))))
     (command->fn (keyword command))))
 
+(defn get-and-run-command
+  []
+  ((match-command-to-fn (get-command))))
+
 (defn say-hi
   []
   (println "hi"))
