@@ -1,4 +1,5 @@
 
+write get-command that asks for and returns a command
 write main and get test to run it
 run main by running app
 remove old tests and methods

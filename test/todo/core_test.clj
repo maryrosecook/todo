@@ -13,5 +13,16 @@
            (with-in-str "Get milk"
              (get-todo))))))
 
+(deftest test-get-command
+  (testing "Asks for 'Enter command: '"
+    (is (= "Enter command: "
+           (with-in-str "new"
+             (with-out-str (get-command))))))
+
+  (testing "Returns comand"
+    (is (= "new"
+           (with-in-str "new"
+             (get-command))))))
+
 (deftest test-can-run-main
   (-main))
