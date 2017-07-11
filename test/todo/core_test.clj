@@ -4,10 +4,9 @@
 
 (deftest test-get-todo
   (testing "Asks for 'New todo: '"
-    (is (=
-         "New todo: "
-         (with-in-str "Get milk"
-           (with-out-str (get-todo))))))
+    (is (= "New todo: "
+           (with-in-str "Get milk"
+             (with-out-str (get-todo))))))
 
   (testing "Returns text input"
     (is (= "Get milk"
