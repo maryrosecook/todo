@@ -1,5 +1,5 @@
 
-
+write main and get test to run it
 run main by running app
 remove old tests and methods
 write method that asks for todo and returns it

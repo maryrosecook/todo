@@ -12,3 +12,6 @@
     (is (= "Get milk"
            (with-in-str "Get milk"
              (get-todo))))))
+
+(deftest test-can-run-main
+  (-main))
