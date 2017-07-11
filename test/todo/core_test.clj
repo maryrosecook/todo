@@ -19,7 +19,7 @@
            (with-in-str "new"
              (with-out-str (get-command))))))
 
-  (testing "Returns comand"
+  (testing "Returns command"
     (is (= "new"
            (with-in-str "new"
              (get-command))))))
