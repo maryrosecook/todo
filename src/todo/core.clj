@@ -1,7 +1,8 @@
 (ns todo.core
   (:gen-class))
 
-(defn get-todo []
+(defn get-todo
+  []
   (print "New todo: ")
   (flush)
   (read-line))
