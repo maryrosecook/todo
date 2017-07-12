@@ -11,7 +11,7 @@
   []
   (print "Enter command: ")
   (flush)
-  (read-line))
+  (keyword (read-line)))
 
 (defn say-hi
   []
@@ -20,12 +20,12 @@
 (defn command->fn
   [command]
   (let [command->fn-mapping {:say-hi say-hi}]
-    (command->fn-mapping (keyword command))))
+    (command->fn-mapping command)))
 
 (defn interaction-loop
   []
   (let [command (user-input-command)]
-    (if (not= command "exit")
+    (if (not= command :exit)
       (do
         ((command->fn command))
         (recur)))))

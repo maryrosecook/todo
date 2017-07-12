@@ -20,19 +20,20 @@
              (with-out-str (user-input-command))))))
 
   (testing "Returns command"
-    (is (= "new"
+    (is (= :new
            (with-in-str "new"
              (user-input-command))))))
 
 (deftest test-command->fn
   (testing "Takes 'say-hi' and returns say-hi fn"
     (is (= say-hi
-           (command->fn "say-hi")))))
+           (command->fn :say-hi)))))
 
 (deftest test-interaction-loop
   (testing "Runs say-hi command and exit command"
-    (with-in-str "say-hi\nexit"
-      (is (= (interaction-loop) nil)))))
+    (is (= nil
+           (with-in-str "exit"
+             (interaction-loop))))))
 
 (deftest test-can-run-main
   (-main))
