@@ -15,7 +15,8 @@
 
 (defn say-hi
   []
-  (println "hi"))
+  (println "hi")
+  :say-hi)
 
 (defn command->fn
   [command]
@@ -25,6 +26,12 @@
 (defn user-input-command-and-run
   []
   ((command->fn (user-input-command))))
+
+(defn interaction-loop
+  []
+  (let [command (user-input-command)]
+    (if (not= command "exit")
+      ((command->fn command)))))
 
 (defn -main
   [& args])

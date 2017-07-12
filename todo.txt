@@ -1,4 +1,6 @@
 
+Create an interaction loop that takes a command and runs it and then exits
+find out what happens when test runs fn that calls exit
 write get-and-run-command that takes command, maps to fn and runs fn
 write match-command-to-fn that takes "say-hi" command and returns say-hi fn
 write get-command that asks for and returns a command

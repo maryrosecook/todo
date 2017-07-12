@@ -34,5 +34,10 @@
     (with-in-str "say-hi"
       (user-input-command-and-run))))
 
+(deftest test-interaction-loop
+  (testing "Runs say-hi command"
+    (with-in-str "say-hi"
+      (is (= (interaction-loop) :say-hi)))))
+
 (deftest test-can-run-main
   (-main))
