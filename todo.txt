@@ -1,4 +1,8 @@
 
+record a todo in the global state
+
+swap out get- for input-?
+get infinite input loop going
 Convert string command to keyword and use it in rest of program
 Update interaction-loop to run command if command or exit if exit passed
 Create an interaction loop that takes a command and runs it and then exits
