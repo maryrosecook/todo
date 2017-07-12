@@ -1,13 +1,13 @@
 (ns todo.core
   (:gen-class))
 
-(defn get-todo
+(defn user-input-todo
   []
   (print "New todo: ")
   (flush)
   (read-line))
 
-(defn get-command
+(defn user-input-command
   []
   (print "Enter command: ")
   (flush)
@@ -17,14 +17,14 @@
   []
   (println "hi"))
 
-(defn match-command-to-fn
+(defn command->fn
   [command]
-  (let [command->fn {:say-hi say-hi}]
-    (command->fn (keyword command))))
+  (let [command->fn-mapping {:say-hi say-hi}]
+    (command->fn-mapping (keyword command))))
 
-(defn get-and-run-command
+(defn user-input-command-and-run
   []
-  ((match-command-to-fn (get-command))))
+  ((command->fn (user-input-command))))
 
 (defn -main
   [& args])

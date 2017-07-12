@@ -2,37 +2,37 @@
   (:require [clojure.test :refer :all]
             [todo.core :refer :all]))
 
-(deftest test-get-todo
+(deftest test-user-input-todo
   (testing "Asks for 'New todo: '"
     (is (= "New todo: "
            (with-in-str "Get milk"
-             (with-out-str (get-todo))))))
+             (with-out-str (user-input-todo))))))
 
   (testing "Returns text input"
     (is (= "Get milk"
            (with-in-str "Get milk"
-             (get-todo))))))
+             (user-input-todo))))))
 
-(deftest test-get-command
+(deftest test-user-input-command
   (testing "Asks for 'Enter command: '"
     (is (= "Enter command: "
            (with-in-str "new"
-             (with-out-str (get-command))))))
+             (with-out-str (user-input-command))))))
 
   (testing "Returns command"
     (is (= "new"
            (with-in-str "new"
-             (get-command))))))
+             (user-input-command))))))
 
-(deftest test-match-command-to-fn
+(deftest test-command->fn
   (testing "Takes 'say-hi' and returns say-hi fn"
     (is (= say-hi
-           (match-command-to-fn "say-hi")))))
+           (command->fn "say-hi")))))
 
-(deftest test-get-and-run-command
+(deftest test-user-input-command-and-run
   (testing "Gets say-hi and runs corresponding fn"
     (with-in-str "say-hi"
-      (get-and-run-command))))
+      (user-input-command-and-run))))
 
 (deftest test-can-run-main
   (-main))
