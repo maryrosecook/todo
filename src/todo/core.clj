@@ -31,4 +31,5 @@
         (recur)))))
 
 (defn -main
-  [& args])
+  [& args]
+  (interaction-loop))
