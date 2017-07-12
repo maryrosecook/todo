@@ -36,4 +36,5 @@
              (interaction-loop))))))
 
 (deftest test-can-run-main
-  (-main))
+  (with-in-str "exit"
+    (-main)))
