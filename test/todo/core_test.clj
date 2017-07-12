@@ -29,11 +29,6 @@
     (is (= say-hi
            (command->fn "say-hi")))))
 
-(deftest test-user-input-command-and-run
-  (testing "Gets say-hi and runs corresponding fn"
-    (with-in-str "say-hi"
-      (user-input-command-and-run))))
-
 (deftest test-interaction-loop
   (testing "Runs say-hi command"
     (with-in-str "say-hi"

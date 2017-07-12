@@ -23,10 +23,6 @@
   (let [command->fn-mapping {:say-hi say-hi}]
     (command->fn-mapping (keyword command))))
 
-(defn user-input-command-and-run
-  []
-  ((command->fn (user-input-command))))
-
 (defn interaction-loop
   []
   (let [command (user-input-command)]
