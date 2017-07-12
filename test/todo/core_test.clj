@@ -32,7 +32,7 @@
 (deftest test-interaction-loop
   (testing "Runs say-hi command and exit command"
     (is (= nil
-           (with-in-str "exit"
+           (with-in-str "say-hi\nexit"
              (interaction-loop {}))))))
 
 (deftest test-new-todo-command
