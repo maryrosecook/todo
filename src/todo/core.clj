@@ -17,6 +17,10 @@
   []
   (println "hi"))
 
+(defn new-todo-command
+  [state]
+  (conj state (user-input-todo)))
+
 (defn command->fn
   [command]
   (let [command->fn-mapping {:say-hi say-hi}]

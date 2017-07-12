@@ -35,6 +35,12 @@
            (with-in-str "exit"
              (interaction-loop {}))))))
 
+(deftest test-new-todo-command
+  (testing "Gets todo from user adds to state and returns state"
+    (is (= ["Get milk"]
+           (with-in-str "Get milk"
+             (new-todo-command []))))))
+
 (deftest test-can-run-main
   (with-in-str "exit"
     (-main)))
