@@ -30,9 +30,9 @@
            (command->fn "say-hi")))))
 
 (deftest test-interaction-loop
-  (testing "Runs say-hi command"
-    (with-in-str "say-hi"
-      (is (= (interaction-loop) :say-hi)))))
+  (testing "Runs say-hi command and exit command"
+    (with-in-str "say-hi\nexit"
+      (is (= (interaction-loop) nil)))))
 
 (deftest test-can-run-main
   (-main))

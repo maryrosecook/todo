@@ -15,8 +15,7 @@
 
 (defn say-hi
   []
-  (println "hi")
-  :say-hi)
+  (println "hi"))
 
 (defn command->fn
   [command]
@@ -27,7 +26,9 @@
   []
   (let [command (user-input-command)]
     (if (not= command "exit")
-      ((command->fn command)))))
+      (do
+        ((command->fn command))
+        (recur)))))
 
 (defn -main
   [& args])

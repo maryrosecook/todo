@@ -1,4 +1,5 @@
 
+Update interaction-loop to run command if command or exit if exit passed
 Create an interaction loop that takes a command and runs it and then exits
 find out what happens when test runs fn that calls exit
 write get-and-run-command that takes command, maps to fn and runs fn
