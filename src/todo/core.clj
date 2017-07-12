@@ -23,13 +23,13 @@
     (command->fn-mapping command)))
 
 (defn interaction-loop
-  []
+  [state]
   (let [command (user-input-command)]
     (if (not= command :exit)
       (do
         ((command->fn command))
-        (recur)))))
+        (recur state)))))
 
 (defn -main
   [& args]
-  (interaction-loop))
+  (interaction-loop {}))

@@ -1,6 +1,7 @@
-
 record a todo in the global state
 
+
+make interaction-loop take and recur with global state
 swap out get- for input-?
 get infinite input loop going
 Convert string command to keyword and use it in rest of program

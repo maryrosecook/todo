@@ -33,7 +33,7 @@
   (testing "Runs say-hi command and exit command"
     (is (= nil
            (with-in-str "exit"
-             (interaction-loop))))))
+             (interaction-loop {}))))))
 
 (deftest test-can-run-main
   (with-in-str "exit"
