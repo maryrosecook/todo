@@ -13,6 +13,10 @@
   (flush)
   (read-line))
 
+(defn say-hi
+  []
+  (println "hi"))
+
 (defn match-command-to-fn
   [command]
   (let [command->fn {:say-hi say-hi}]
@@ -21,10 +25,6 @@
 (defn get-and-run-command
   []
   ((match-command-to-fn (get-command))))
-
-(defn say-hi
-  []
-  (println "hi"))
 
 (defn -main
   [& args])
