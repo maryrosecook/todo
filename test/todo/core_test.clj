@@ -33,7 +33,12 @@
   (testing "Runs say-hi command and exit command"
     (is (= nil
            (with-in-str "say-hi\nexit"
-             (interaction-loop {}))))))
+             (interaction-loop [])))))
+
+  (testing "Runs new command and exit command"
+    (is (= nil
+           (with-in-str "new\nGet milk\nexit"
+             (interaction-loop []))))))
 
 (deftest test-new-todo-command
   (testing "Gets todo from user adds to state and returns state"

@@ -14,8 +14,9 @@
   (keyword (read-line)))
 
 (defn say-hi
-  []
-  (println "hi"))
+  [state]
+  (println "hi")
+  state)
 
 (defn new-todo-command
   [state]
@@ -23,7 +24,8 @@
 
 (defn command->fn
   [command]
-  (let [command->fn-mapping {:say-hi say-hi}]
+  (let [command->fn-mapping {:say-hi say-hi
+                             :new new-todo-command}]
     (command->fn-mapping command)))
 
 (defn interaction-loop
@@ -31,9 +33,9 @@
   (let [command (user-input-command)]
     (if (not= command :exit)
       (do
-        ((command->fn command))
+        ((command->fn command) state)
         (recur state)))))
 
 (defn -main
   [& args]
-  (interaction-loop {}))
+  (interaction-loop []))

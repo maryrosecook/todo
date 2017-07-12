@@ -1,6 +1,6 @@
 record a todo in the global state
 
-
+Allow interaction loop to add todo
 make add-todo command that takes state and adds created todo
 make interaction-loop take and recur with global state
 swap out get- for input-?
